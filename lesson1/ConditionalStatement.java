@@ -16,18 +16,18 @@ public class ConditionalStatement {
 			System.out.println("3. man - No");
 		}
 		if (high < 1.80) {
-			System.out.println("4." + high + "< 1.8 - Yes");
-		}		else{
+				System.out.println("4." + high + "< 1.8 - Yes");
+		}	else {
 			System.out.println("4.1" + high + " < 1.8 - No");
-				}
+			}
 		if (firstChar == 'A') {
-			System.out.println("First Chart Name equal A , Yes");
-		}		else{ 
-				if ( firstChar == 'I') {
-					System.out.println("First Chart Name equal I , Yes");
-				}	else{
+				System.out.println("First Chart Name equal A , Yes");
+		}	else { 
+					if ( firstChar == 'I') {
+							System.out.println("First Chart Name equal I , Yes");
+					}	else{
 					System.out.println(firstChar + " != M,I");
-					}
+						}
 				}
 	}
 }
