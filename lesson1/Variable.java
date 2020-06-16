@@ -14,9 +14,9 @@ public class Variable {
  		System.out.println("Serinyi nomer = " + serialNum);
 		System.out.println("LiteralName proces = " + inteli7);
 		System.out.println("NomerProducta = " + productNum);
-		System.out.println("float = " + freq);
-		System.out.println("double = " + rom);
-		System.out.println("char = " + literalCore);
-		System.out.println("boolean = " + own); 
+		System.out.println("Chastota Core = " + freq);
+		System.out.println("Operativka = " + rom);
+		System.out.println("Simvol Core = " + literalCore);
+		System.out.println("Vladelec = " + own); 
 	}
 }
