@@ -1,6 +1,6 @@
 
 public class ConditionalStatement {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		byte age = 10;
 		boolean man = true;
 		double high = 1.2;
