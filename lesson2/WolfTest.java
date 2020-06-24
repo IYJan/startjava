@@ -6,7 +6,7 @@ public class Wolf {
 		wolf1.nickName = "Li";
 		wolf1.weight = 80;
 		wolf1.color = "white";
-		System.out.println("How old = " + wolf1.old + "NickName = " + wolf1.nickName + "Weight = " + wolf1.weight + "Color = " + wolf1.color);
+		System.out.println("How old = " + wolf1.old + " NickName = " + wolf1.nickName + " Weight = " + wolf1.weight + " Color = " + wolf1.color);
 
  		wolf1.walk(){};
 		wolf1.sit(){};
