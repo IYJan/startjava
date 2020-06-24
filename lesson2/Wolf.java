@@ -3,9 +3,14 @@ public class Wolf {
 	byte old = 50, weight = 90;
 	String color = "black";
 
-	public void walk(){};
-	public void sit(){};
-	public void run(){};
-	public void howl(){};
-	public void hunting(){};
+	void walk(){
+	}
+	void sit(){
+	}
+	void run(){
+	}
+	void howl(){
+	}
+	void hunting(){
+	}
 }
