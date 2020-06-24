@@ -8,10 +8,10 @@ public class Wolf {
 		wolf1.color("white");
 		System.out.println("How old = " + wolf1.old() + " NickName = " + wolf1.nickName() + " Weight = " + wolf1.weight() + " Color = " + wolf1.color());
 
- 		wolf1.walk(){};
-		wolf1.sit(){};
-		wolf1.run(){};
-		wolf1.howl(){};
-	 	wolf1.hunting(){};
+ 		wolf1.walk();
+		wolf1.sit();
+		wolf1.run();
+		wolf1.howl();
+	 	wolf1.hunting();
 	}
 }
