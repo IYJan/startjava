@@ -1,12 +1,9 @@
-//import java.util.Scanner;
-
-
 public class Calculate {
 	
 	public static void main (String[] args) {
 		int num1 = 2, num2 = 3, num0 = 1;//Scanner reader = new Scanner(System.in);
 		char oprt  = '^';
-		System.out.println("Dano chisla 34 and 43");//	num1 = reader.nextDouble();//	oprt = reader.next().charAt(0);
+		System.out.println("Do operation 2 ^ 3 =");//	num1 = reader.nextDouble();//	oprt = reader.next().charAt(0);
 			if (oprt == '+') {
 				num0 = num1 + num2;
 			}
@@ -39,6 +36,6 @@ public class Calculate {
 						}
 					}	
 				}
-			System.out.println( num1 +" "+ oprt + " " + num2 + " RESULT IS " + num0);
+			System.out.println(num1 +" "+ oprt + " " + num2 + " RESULT IS " + num0);
 	}
 }
