@@ -3,19 +3,22 @@ public class Cycle {
 		getFor();
 		getWhile();
 		getDoWhile();
-
-		public class getFor() {
+	}
+	
+		public void getFor() {
 			for (int i=0; i <=20; i++) {
 				System.out.println("1. " + i + ", ");
 		}
-		public class getWhile() {
+
+		public void getWhile() {
 			byte y = 6;
 				while ((-6 <= y) && (y <= 6)) {
 					System.out.println("2. chislo ot -6 do 6 step 2, = " + y);
 					y -= 2;
 				}
 		}
-		public class getDoWhile() {
+
+		public void getDoWhile() {
 			int z = 10;
 			y = 0;
 				do {
@@ -27,5 +30,4 @@ public class Cycle {
 				} while (z <=20);
 		}
 		}
-	}
 }
