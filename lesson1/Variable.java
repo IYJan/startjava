@@ -17,6 +17,6 @@ public class Variable {
 		System.out.println("Chastota Core = " + freq);
 		System.out.println("Operativka = " + rom);
 		System.out.println("Simvol Core = " + literalCore);
-		System.out.println("Vladelec = " + own); 
+		System.out.println("Private = " + own); 
 	}
 }
