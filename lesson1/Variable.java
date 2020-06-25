@@ -10,13 +10,13 @@ public class Variable {
 		boolean own = true;	
 		byte core = 2;
 
-		System.out.println("Chislo yader = " + core);
- 		System.out.println("Serinyi nomer = " + serialNum);
-		System.out.println("LiteralName proces = " + inteli7);
-		System.out.println("NomerProducta = " + productNum);
-		System.out.println("Chastota Core = " + freq);
-		System.out.println("Operativka = " + rom);
-		System.out.println("Simvol Core = " + literalCore);
-		System.out.println("Private = " + own); 
+		System.out.println("Chislo yader = " + core + "\n" +
+						   "Serinyi nomer = " + serialNum + "\n" +
+						   "LiteralName proces = " + inteli7 + "\n" +
+						   "NomerProducta = " + productNum + "\n" +
+						   "Chastota Core = " + freq + "\n" +
+						   "Operativka = " + rom + "\n" +
+						   "Simvol Core = " + literalCore + "\n" +
+						   "Private = " + own); 
 	}
 }
