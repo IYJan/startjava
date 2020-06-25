@@ -1,29 +1,28 @@
 public class MyFirstGame {
-	public boolean eql;
-	public static void main (String[] args) {
+	public static boolean eql;
+	public static void main(String[] args) {
 		long rangeBegin = 0L;
 		long rangeEnd = 100L;
 		long currentTime = System.currentTimeMillis();
 		long randomNumber = rangeBegin + currentTime % (rangeEnd - rangeBegin);
-		System.out.println("chislo 1-st random" + randomNumber);
-
+		System.out.println("1-st number for random" + randomNumber);
 		do {
 			long currentTime2 = System.currentTimeMillis();
 			long humNumb = rangeBegin + currentTime2 % (rangeEnd - rangeBegin);
-			System.out.println("chislo 2st random" + humNumb);
+			System.out.println("2-nd num. for random" + humNumb);
 				if (randomNumber != humNumb) {
 					eql = false;
 				}
 				if (randomNumber == humNumb){
-					System.out.println("Confirmed equality for 2 numbers");		
-					eql = true;
+					System.out.println("Confirmed equality for 2 numbers; " + "\n" + 
+										" 1-st number for random = " + randomNumber);		
+					break;
+					//eql = true;
+				} else if (randomNumber > humNumb){
+					System.out.println("randomNumber > then human num.");		
 				} else {
-					if (randomNumber > humNumb){
-						System.out.println("randomNumber > then human num.");		
-					} else {
-						System.out.println("randomNumber < then human num.");		
-					}
+					System.out.println("randomNumber < then human num.");		
 				}
-		} while (eql == false);
+		} while (true);
 	}
 }
