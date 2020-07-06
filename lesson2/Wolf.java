@@ -1,8 +1,8 @@
 public class Wolf {
 	String gender = "Man";
 	String nickName = "Mark";
-	byte old = 50;
-	byte weight = 90;
+	int old = 50;
+	int weight = 90;
 	String color = "black";
 
 	public String getGender() {
@@ -11,10 +11,10 @@ public class Wolf {
 	public String getNickName() {
 		return this.nickName;
 	}
-	public byte getOld() {
+	public int getOld() {
 		return this.old;
 	}
-	public byte getWeight() {
+	public int getWeight() {
 		return this.weight;
 	}
 	public String getColor() {
