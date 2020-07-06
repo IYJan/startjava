@@ -1,11 +1,11 @@
 public class Wolf {
-	String gender = "Man";
-	String nickName = "Mark";
-	int old = 50;
-	int weight = 90;
-	String color = "black";
+	 String gender = "Man";
+	 String nickName = "Mark";
+	 int age = 50;
+	 int weight = 90;
+	 String color = "black";
 
-	public String getGender() {
+/*	public String getGender() {
 		return this.gender;
 	}
 	public String getNickName() {
@@ -35,7 +35,7 @@ public class Wolf {
 	}
 	public void setColor(String color) {
 		this.color = color;
-	}
+	}*/
 
 	void walk() {
 	}
