@@ -1,12 +1,15 @@
 public class WolfTest {
 	public static void main(String[] args) {
 		Wolf wolf1 = new Wolf();
-		wolf1.old(5);
-		wolf1.gender("WoMan");
-		wolf1.nickName("Li");
-		wolf1.weight(80);
-		wolf1.color("white");
-		System.out.println("How old = " + wolf1.old + " NickName = " + wolf1.nickName + " Weight = " + wolf1.weight + " Color = " + wolf1.color);
+		int old = wolf1.getOld();
+		String gender = wolf1.getGender();
+		String nicjName = wolf1.getNickName();
+		int Weight = wolf1.getWeight();
+		String Color = wolf1.getColor();
+		System.out.println("How old = " + wolf1.getOld() + "\n" + 
+			" NickName = " + wolf1.getNickName() + "\n" +
+			" Weight = " + wolf1.getWeight() + "\n" +
+			" Color = " + wolf1.getColor());
 
  		wolf1.walk();
 		wolf1.sit();
