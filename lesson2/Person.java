@@ -1,6 +1,8 @@
 public class Person {
-	String gender = "Man", name = "Mark";
-	byte old = 50, weight = 90;
+	String gender = "Man";
+	String name = "Mark";
+	byte old = 50;
+	byte weight = 90;
 	float height = 1.92f;
 
 	public void walk() {};
