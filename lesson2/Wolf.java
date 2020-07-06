@@ -21,6 +21,22 @@ public class Wolf {
 		return this.color;
 	}
 
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	public void setOld(int old) {
+		this.old = old;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+
 	void walk() {
 	}
 	void sit() {
