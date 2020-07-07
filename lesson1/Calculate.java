@@ -1,5 +1,4 @@
 public class Calculate {
-	
 	public static void main(String[] args) {
 		int num1 = 2, num2 = 3, result = 0;//Scanner reader = new Scanner(System.in);
 		char sign  = '^';
