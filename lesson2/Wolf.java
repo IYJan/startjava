@@ -1,18 +1,18 @@
 public class Wolf {
-	 String gender = "Man";
-	 String nickName = "Mark";
-	 int age = 50;
-	 int weight = 90;
-	 String color = "black";
+	private String gender = "Man";
+	private String nickName = "Mark";
+	private int age = 50;
+	private int weight = 90;
+	private String color = "black";
 
-/*	public String getGender() {
+	public String getGender() {
 		return this.gender;
 	}
 	public String getNickName() {
 		return this.nickName;
 	}
-	public int getOld() {
-		return this.old;
+	public int getAge() {
+		return this.age;
 	}
 	public int getWeight() {
 		return this.weight;
@@ -27,24 +27,27 @@ public class Wolf {
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
-	public void setOld(int old) {
-		this.old = old;
+	public void setAge(int age) {
+		if (age > 8) {
+			System.out.println("Incorret age");
+		} else this.age = age;
+		
 	}
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 	public void setColor(String color) {
 		this.color = color;
-	}*/
+	}
 
-	void walk() {
+	public void walk() {
 	}
-	void sit() {
+	public void sit() {
 	}
-	void run() {
+	public void run() {
 	}
-	void howl() {
+	public void howl() {
 	}
-	void hunting() {
+	public void hunting() {
 	}
 }
