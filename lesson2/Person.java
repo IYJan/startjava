@@ -1,10 +1,19 @@
 public class Person {
-	String gender = "Man";
-	String name = "Mark";
-	byte age = 50;
-	byte weight = 90;
-	float height = 1.92f;
+	String name;
+	int count;
 
+	public String getName() {
+		return this.name;
+	}
+	public int getCount() {
+		return this.count;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public void walk() {};
 	public void sit() {};
 	public void run() {};
