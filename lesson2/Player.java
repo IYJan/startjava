@@ -1,6 +1,6 @@
 public class Player {
 	private String name;
-	private int count;
+	private int number;
 
 	public Player(String name) {
 		this.name = name;
@@ -10,15 +10,15 @@ public class Player {
 		return this.name;
 	}
 
-	public int getCount() {
-		return this.count;
+	public int getNumber() {
+		return this.number;
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public void setCount(int count) {
-		this.count = count;
+	public void setNumber(int number) {
+		this.number = number;
 	}
 }
