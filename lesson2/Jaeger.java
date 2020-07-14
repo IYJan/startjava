@@ -5,11 +5,10 @@ public class Jaeger {
 	private String armor1;
 	private String armor2;
 	private int kaijiKill;
-	private Double weightTonn;
+	private double weightTonn;
 	private float height;
-	private boolean toMove;
+	private boolean isMove;
 
-	public Jaeger() {};
 	public Jaeger(String nickName, String launch, String marK, String armor1, String armor2, int kaijiKill, Double weightTonn, float height) {
 		this.nickName = nickName;
 		this.launch = launch;
@@ -20,64 +19,82 @@ public class Jaeger {
 		this.height = height;
 		this.kaijiKill = kaijiKill;
 	}
+
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
+
 	public void setLaunch(String launch) {
 		this.launch = launch;
 	}
-	public void setMarkName(String marK) {
+
+	public void setMark(String marK) {
 		this.marK = marK;
 	}
+
 	public void setArm1(String armor1) {
 		this.armor1 = armor1;
 	}
+
 	public void setArm2(String armor2) {
 		this.armor2 = armor2;
 	}
-	public void setWeight(Double weightTonn) {
+
+	public void setWeight(double weightTonn) {
 		this.weightTonn = weightTonn;
 	}
+
 	public void setHeight(float height) {
 		this.height = height;
 	}
-	public void setKills(int kaijiKill) {
+
+	public void setKaijiKills(int kaijiKill) {
 		this.kaijiKill = kaijiKill;
 	}
 	
 	public String getNickName() {
 		return this.nickName;
 	}
+
 	public String getLaunch() {
 		return this.launch;
 	}
-	public String getMarkName() {
+
+	public String getMark() {
 		return this.marK;
 	}
+
 	public String getArm1() {
 		return this.armor1;
 	}
+
 	public String getArm2() {
 		return this.armor2;
 	}
-	public Double getWeight() {
+
+	public Double getWeightTonn() {
 		return this.weightTonn;
 	}
+
 	public float getHeight() {
 		return this.height;
 	}
-	public int getKills() {
+
+	public int getKaijiKills() {
 		return this.kaijiKill;
 	}
 	
-	public void move() {
-		this.toMove = true;
-	};
-	public String kaijiScan() {
+	public void isMove() {
+		this.isMove = true;
+	}
+
+	public String isKaijiScan() {
 		return "scanning";
-	};
-	public void fireArm1() {
-	};
-	public void fireArm2() {
-	};
+	}
+
+	public void isFireArm1() {
+	}
+
+	public void isFireArm2() {
+	}
 }
