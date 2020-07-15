@@ -40,7 +40,7 @@ public class Jaeger {
 		this.armor2 = armor2;
 	}
 
-	public void setWeight(double weightTonn) {
+	public void setWeightTonn(double weightTonn) {
 		this.weightTonn = weightTonn;
 	}
 
