@@ -50,7 +50,7 @@ public class GuesNumber {
 				player1.setNumber(num);
 
 				do {
-					System.out.println(player2.getName() + "Please, enter u number= ");
+					System.out.println(player2.getName() + " Please, enter u number= ");
 					num = reader.nextInt();
 					player2.setNumber(num);
 					if (player1.getNumber() == player2.getNumber()) {

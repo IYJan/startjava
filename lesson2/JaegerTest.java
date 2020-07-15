@@ -11,7 +11,7 @@ public class JaegerTest {
 		jag2.setMarkName("Mark-5");
 		jag2.setArm1("Gatling");
 		jag2.setArm2("Bombard");
-		jag2.setKills(100);
+		jag2.setKaijiKills(100);
 		jag2.setWeight(3.2);
 		jag2.setHeight(200f);
 		int count;
@@ -40,7 +40,7 @@ public class JaegerTest {
 			jag1.setArm2(name);
 			System.out.println("Input Kills:");
 			count = reader.nextInt();
-			jag1.setKills(count);
+			jag1.setKaijiKills(count);
 			System.out.println("Input Weight:");
 			countD = reader.nextDouble();
 			jag1.setWeight(countD);
@@ -53,13 +53,13 @@ public class JaegerTest {
 						    "Date launch is          " + jag1.getLaunch() + "\n"+
 							"Armor1 is               " + jag1.getArm1() + "\n"+
 							"Armor2 is               " + jag1.getArm2() + "\n"+
-							"How many kills kaiji is " + jag1.getKills());
+							"How many kills kaiji is " + jag1.getKaijiKills());
 		System.out.println();
 		System.out.println("Jaeger2: Name is         " + jag2.getNickName() + "\n"+
 						    "Date launch is          " + jag2.getLaunch() + "\n"+
 							"Armor1 is               " + jag2.getArm1() + "\n"+
 							"Armor2 is               " + jag2.getArm2() + "\n"+
-							"How many kills kaiji is " + jag2.getKills());
+							"How many kills kaiji is " + jag2.getKaijiKills());
 		jag1.setArm1("Rifle");
 		System.out.println("We changed Jaeger2 Armor1, now is " + jag1.getArm1());
 	}
