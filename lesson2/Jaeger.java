@@ -9,7 +9,7 @@ public class Jaeger {
 	private float height;
 	private boolean isMove;
 
-	public Jaeger(String nickName, String launch, String markName, String armor1, String armor2, int kaijiKill, Double weightTonn, float height) {
+	public Jaeger(String nickName, String launch, String markName, String armor1, String armor2, int kaijiKill, double weightTonn, float height) {
 		this.nickName = nickName;
 		this.launch = launch;
 		this.markName = markName;
