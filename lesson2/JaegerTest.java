@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class JaegerTest {
 	public static void main(String[] args) {
-		Jaeger jag1 = new Jaeger();
-		Jaeger jag2 = new Jaeger();
-		//Jaeger jag2 = new Jaeger("Robot2", "10/11/2222", "Mark-5", "Gutling", "Laser100", 100, 3.2 ,200f );
+		Jaeger jag2 = new Jaeger("Robot0", "01/01/20000", "Mark-2", "Knife", "Laser60", 10, 2.4 , 200f);
+		Jaeger jag1 = new Jaeger("Robot1", "11/11/1999", "Mark-1", "Fire", "Laser10", 80, 2.2 , 220f);
 		String name;
 		jag2.setNickName("Robot2");
 		jag2.setLaunch("10/11/2222");
@@ -12,11 +11,11 @@ public class JaegerTest {
 		jag2.setArm1("Gatling");
 		jag2.setArm2("Bombard");
 		jag2.setKaijiKills(100);
-		jag2.setWeight(3.2);
+		jag2.setWeightTonn(3.2);
 		jag2.setHeight(200f);
 		int count;
 		float countF;
-		Double countD;
+		double countD;
 		Scanner reader = new Scanner(System.in);
 		//System.out.println("Jag1 Arm1: = " + jag1.getArm1() + "\n" + 
 		//	                "Height: = " + jag1.getHeight());
@@ -43,7 +42,7 @@ public class JaegerTest {
 			jag1.setKaijiKills(count);
 			System.out.println("Input Weight:");
 			countD = reader.nextDouble();
-			jag1.setWeight(countD);
+			jag1.setWeightTonn(countD);
 			System.out.println("Input Height:");
 			countF = reader.nextFloat();
 			jag1.setHeight(countF);
