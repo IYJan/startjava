@@ -41,7 +41,7 @@ public class JaegerTest {
 							"Armor2 is \t\t" + jag2.getArm2() + "\n"+
 							"How many kills kaiji is " + jag2.getKaijiKills());
 		jag1.setArm1("Rifle");
-		System.out.println("We changed Jaeger2 Armor1, now is " + jag1.getArm1());
+		System.out.println("We changed Jaeger1 Armor1, now is " + jag1.getArm1());
 	}
 
 		private static void activateJaeger(Jaeger jaeger) {
