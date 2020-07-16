@@ -14,7 +14,7 @@ public class GuessNumber {
 		public void startGame() {
 			randomNumber = (int) (Math.random() * 101);
 			System.out.println("randomNumber = " + randomNumber);
-			searchNumb();
+			enterNumb();
 			while (true) {
 				if (isWin(player1)) {
 					System.out.println("player1 win ");
@@ -43,7 +43,7 @@ public class GuessNumber {
 			return false;
 			}
 
-		private void searchNumb() {
+		private void enterNumb() {
 			do {
 				System.out.println(player1.getName() + " Please, enter u number= ");
 				int num = reader.nextInt();
