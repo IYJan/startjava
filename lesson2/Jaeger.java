@@ -88,13 +88,13 @@ public class Jaeger {
 		isMove = true;
 	}
 
-	public String isKaijiScan() {
+	public String kaijiScan() {
 		return "scanning";
 	}
 
-	public void isFireArm1() {
+	public void fireArm1() {
 	}
 
-	public void isFireArm2() {
+	public void fireArm2() {
 	}
 }
