@@ -53,39 +53,39 @@ public class Jaeger {
 	}
 	
 	public String getNickName() {
-		return this.nickName;
+		return nickName;
 	}
 
 	public String getLaunch() {
-		return this.launch;
+		return launch;
 	}
 
 	public String getMark() {
-		return this.marK;
+		return marK;
 	}
 
 	public String getArm1() {
-		return this.armor1;
+		return armor1;
 	}
 
 	public String getArm2() {
-		return this.armor2;
+		return armor2;
 	}
 
 	public Double getWeightTonn() {
-		return this.weightTonn;
+		return weightTonn;
 	}
 
 	public float getHeight() {
-		return this.height;
+		return height;
 	}
 
 	public int getKaijiKills() {
-		return this.kaijiKill;
+		return kaijiKill;
 	}
 	
 	public void isMove() {
-		this.isMove = true;
+		isMove = true;
 	}
 
 	public String isKaijiScan() {

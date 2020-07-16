@@ -2,7 +2,7 @@ public class Person {
 	String name = "Garry";
 	String sex = "Male";
 	float height = 1.90f;
-	Double weight = 88.9;
+	double weight = 88.9;
 	int age = 35;
 
 	public void walk() {
