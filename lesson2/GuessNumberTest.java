@@ -16,7 +16,6 @@ public class GuessNumberTest {
 
 		private static boolean isNext() {
 		char continue1;
-			
 			do {
 				System.out.println("Do u wanna continue?: Y or N");
 				continue1 = reader.next().charAt(0);
