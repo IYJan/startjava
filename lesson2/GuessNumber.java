@@ -14,14 +14,19 @@ public class GuessNumber {
 	public void startGame() {
 		randomNumber = (int) (Math.random() * 101);
 		System.out.println("randomNumber = " + randomNumber);
-		enterNum();
+		do {
+			if (inputNum(player1) == inputNum(player2)) {
+			System.out.println(" Your numbers are equality, " + "\n" + 
+			player1.getName() + " = " + player1.getNumber() +"\n" + 
+			player2.getName() + " = "+ player2.getNumber() + "\n");
+			System.out.println("Gues, somebody must rewrite u number");
+			} else break;
+		} while(true);
 		while (true) {
-			if (isWin(player1)) {
-				System.out.println("player1 win ");
+			if (compareNums(player1)) {
 				break;
 			}
-			if (isWin(player2)) {
-				System.out.println("player2 win ");
+			if (compareNums(player2)) {
 				return;
 			}
 			System.out.println("Nobody Win");
@@ -29,32 +34,17 @@ public class GuessNumber {
 		}
 	}
 
-	private void enterNum() {
-		do {
-			System.out.println(player1.getName() + " please, enter u number= ");
-			int num = reader.nextInt();
-			player1.setNumber(num);
-			do {
-				System.out.println(player2.getName() + " please, enter u number= ");
-				num = reader.nextInt();
-				player2.setNumber(num);
-				if (player1.getNumber() == player2.getNumber()) {
-					System.out.println(" Your numbers are equality, " + "\n" + 
-					player1.getName() + " = " + player1.getNumber() +"\n" + 
-					player2.getName() + " = "+ player2.getNumber() + "\n" + 
-					player2.getName() + " u need change the number ");
-				} else break;
-			} while(true);
-		} while (false);
+	private int inputNum(Player player) {
+			System.out.println(player.getName() + " please, enter u number = ");
+			player.setNumber(reader.nextInt());
+			return player.getNumber();
 	}
 
-	private boolean isWin(Player player) {
-/*		System.out.println("Begin win method");
-			System.out.println("Player" + player.getName() + player.getNumber() + " Begin Search");*/
+	private boolean compareNums(Player player) {
 		if (player.getNumber() > randomNumber) {
-			System.out.println(player.getName() + " u number > that the computer number ");
+			System.out.println(player.getName() + " u number > that the computer number \n");
 		} else if (player.getNumber() < randomNumber) {
-			System.out.println(player.getName() + " u number < that the computer number ");
+			System.out.println(player.getName() + " u number < that the computer number \n");
 		} else {
 			System.out.println(player.getName() + " u are win ");
 			return true;
