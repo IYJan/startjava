@@ -1,7 +1,7 @@
 public class Jaeger {
 	private String nickName;
 	private String launch;
-	private String marK;
+	private String markName;
 	private String armor1;
 	private String armor2;
 	private int kaijiKill;
@@ -9,10 +9,10 @@ public class Jaeger {
 	private float height;
 	private boolean isMove;
 
-	public Jaeger(String nickName, String launch, String marK, String armor1, String armor2, int kaijiKill, Double weightTonn, float height) {
+	public Jaeger(String nickName, String launch, String markName, String armor1, String armor2, int kaijiKill, Double weightTonn, float height) {
 		this.nickName = nickName;
 		this.launch = launch;
-		this.marK = marK;
+		this.markName = markName;
 		this.armor1 = armor1;
 		this.armor2 = armor2;
 		this.weightTonn = weightTonn;
@@ -28,8 +28,8 @@ public class Jaeger {
 		this.launch = launch;
 	}
 
-	public void setMark(String marK) {
-		this.marK = marK;
+	public void setMarkName(String markName) {
+		this.markName = markName;
 	}
 
 	public void setArm1(String armor1) {
@@ -60,8 +60,8 @@ public class Jaeger {
 		return launch;
 	}
 
-	public String getMark() {
-		return marK;
+	public String getMarkName() {
+		return markName;
 	}
 
 	public String getArm1() {
