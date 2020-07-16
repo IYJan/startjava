@@ -30,15 +30,15 @@ public class JaegerTest {
 			} else if (sign != 'N') System.out.println("Only Y or N"); 
 		} while (sign != 'N');
 		System.out.println("Jaeger1: Name is \t" + jag1.getNickName() + "\n"+
-						    "Date launch is \t" + jag1.getLaunch() + "\n"+
-							"Armor1 is \t" + jag1.getArm1() + "\n"+
-							"Armor2 is \t" + jag1.getArm2() + "\n"+
+						    "Date launch is \t\t" + jag1.getLaunch() + "\n"+
+							"Armor1 is \t\t" + jag1.getArm1() + "\n"+
+							"Armor2 is \t\t" + jag1.getArm2() + "\n"+
 							"How many kills kaiji is " + jag1.getKaijiKills());
 		System.out.println();
 		System.out.println("Jaeger2: Name is \t" + jag2.getNickName() + "\n"+
-						    "Date launch is \t" + jag2.getLaunch() + "\n"+
-							"Armor1 is \t" + jag2.getArm1() + "\n"+
-							"Armor2 is \t" + jag2.getArm2() + "\n"+
+						    "Date launch is \t\t" + jag2.getLaunch() + "\n"+
+							"Armor1 is \t\t" + jag2.getArm1() + "\n"+
+							"Armor2 is \t\t" + jag2.getArm2() + "\n"+
 							"How many kills kaiji is " + jag2.getKaijiKills());
 		jag1.setArm1("Rifle");
 		System.out.println("We changed Jaeger2 Armor1, now is " + jag1.getArm1());
