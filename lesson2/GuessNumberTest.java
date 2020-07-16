@@ -12,7 +12,7 @@ public class GuessNumberTest {
 
 		do {
 			game.startGame();
-		} while (willNext());
+		} while (isNext());
 	}
 
 		private static String inputName(int num) {
