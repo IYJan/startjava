@@ -24,62 +24,62 @@ public class Jaeger {
 		this.nickName = nickName;
 	}
 
-	public void setLaunch(String launch) {
-		this.launch = launch;
-	}
-
-	public void setMarkName(String markName) {
-		this.markName = markName;
-	}
-
-	public void setArm1(String armor1) {
-		this.armor1 = armor1;
-	}
-
-	public void setArm2(String armor2) {
-		this.armor2 = armor2;
-	}
-
-	public void setWeightTonn(double weightTonn) {
-		this.weightTonn = weightTonn;
-	}
-
-	public void setHeight(float height) {
-		this.height = height;
-	}
-
-	public void setKaijiKills(int kaijiKill) {
-		this.kaijiKill = kaijiKill;
-	}
-	
 	public String getNickName() {
 		return nickName;
+	}
+
+	public void setLaunch(String launch) {
+		this.launch = launch;
 	}
 
 	public String getLaunch() {
 		return launch;
 	}
 
+	public void setMarkName(String markName) {
+		this.markName = markName;
+	}
+
 	public String getMarkName() {
 		return markName;
+	}
+
+	public void setArm1(String armor1) {
+		this.armor1 = armor1;
 	}
 
 	public String getArm1() {
 		return armor1;
 	}
 
+	public void setArm2(String armor2) {
+		this.armor2 = armor2;
+	}
+
 	public String getArm2() {
 		return armor2;
+	}
+
+	public void setWeightTonn(double weightTonn) {
+		this.weightTonn = weightTonn;
 	}
 
 	public Double getWeightTonn() {
 		return weightTonn;
 	}
 
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
 	public float getHeight() {
 		return height;
 	}
 
+	public void setKaijiKills(int kaijiKill) {
+		this.kaijiKill = kaijiKill;
+	}
+	
 	public int getKaijiKills() {
 		return kaijiKill;
 	}
