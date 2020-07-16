@@ -34,18 +34,17 @@ public class GuessNumber {
 			System.out.println(player1.getName() + " please, enter u number= ");
 			int num = reader.nextInt();
 			player1.setNumber(num);
-
-		do {
-			System.out.println(player2.getName() + " please, enter u number= ");
-			num = reader.nextInt();
-			player2.setNumber(num);
-			if (player1.getNumber() == player2.getNumber()) {
-				System.out.println(" Your numbers are equality, " + "\n" + 
-				player1.getName() + " = " + player1.getNumber() +"\n" + 
-				player2.getName() + " = "+ player2.getNumber() + "\n" + 
-				player2.getName() + " u need change the number ");
-			} else break;
-		} while(true);
+			do {
+				System.out.println(player2.getName() + " please, enter u number= ");
+				num = reader.nextInt();
+				player2.setNumber(num);
+				if (player1.getNumber() == player2.getNumber()) {
+					System.out.println(" Your numbers are equality, " + "\n" + 
+					player1.getName() + " = " + player1.getNumber() +"\n" + 
+					player2.getName() + " = "+ player2.getNumber() + "\n" + 
+					player2.getName() + " u need change the number ");
+				} else break;
+			} while(true);
 		} while (false);
 	}
 
