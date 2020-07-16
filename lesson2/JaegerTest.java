@@ -1,10 +1,14 @@
 import java.util.Scanner;
 
 public class JaegerTest {
+	private static Scanner reader = new Scanner(System.in);
+	private static char sign;
+	private static Jaeger jag1;
+	private static Jaeger jag2;
 	public static void main(String[] args) {
-		Jaeger jag2 = new Jaeger("Robot0", "01/01/20000", "Mark-2", "Knife", "Laser60", 10, 2.4 , 200f);
-		Jaeger jag1 = new Jaeger("Robot1", "11/11/1999", "Mark-1", "Fire", "Laser10", 80, 2.2 , 220f);
-		String name;
+		jag2 = new Jaeger("Robot0", "01/01/20000", "Mark-2", "Knife", "Laser60", 10, 2.4, 200f);
+		jag1 = new Jaeger("Robot1", "11/11/1999", "Mark-1", "Fire", "Laser10", 80, 2.2, 220f);
+		//String name;
 		jag2.setNickName("Robot2");
 		jag2.setLaunch("10/11/2222");
 		jag2.setMarkName("Mark-5");
@@ -16,50 +20,46 @@ public class JaegerTest {
 		int count;
 		float countF;
 		double countD;
-		Scanner reader = new Scanner(System.in);
-		//System.out.println("Jag1 Arm1: = " + jag1.getArm1() + "\n" + 
-		//	                "Height: = " + jag1.getHeight());
-
-		while (true) {
-			System.out.println("U can activate special jaeger for urself.parametrs");
-			System.out.println("Input NickName:");
-			name = reader.next();
-			jag1.setNickName(name);
-			System.out.println("Input Launch: day/month/year");
-			name = reader.next();
-			jag1.setLaunch(name);
-			System.out.println("Input MarkName:");
-			name = reader.next();
-			jag1.setMarkName(name);
-			System.out.println("Input Armor1:");
-			name = reader.next();
-			jag1.setArm1(name);
-			System.out.println("Input Armor2:");
-			name = reader.next();
-			jag1.setArm2(name);
-			System.out.println("Input Kills:");
-			count = reader.nextInt();
-			jag1.setKaijiKills(count);
-			System.out.println("Input Weight:");
-			countD = reader.nextDouble();
-			jag1.setWeightTonn(countD);
-			System.out.println("Input Height:");
-			countF = reader.nextFloat();
-			jag1.setHeight(countF);
-			break;
-		}
-		System.out.println("Jaeger: Name is          " + jag1.getNickName() + "\n"+
-						    "Date launch is          " + jag1.getLaunch() + "\n"+
-							"Armor1 is               " + jag1.getArm1() + "\n"+
-							"Armor2 is               " + jag1.getArm2() + "\n"+
+		
+		do {
+			System.out.println("Do u wanna activate special jaeger for urself.parametrs? Y or N");
+			sign = reader.next().charAt(0);
+			if ( sign == 'Y') {
+				activateJaeger(jag2);
+				break;
+			} else if (sign != 'N') System.out.println("Only Y or N"); 
+		} while (sign != 'N');
+		System.out.println("Jaeger1: Name is \t" + jag1.getNickName() + "\n"+
+						    "Date launch is \t" + jag1.getLaunch() + "\n"+
+							"Armor1 is \t" + jag1.getArm1() + "\n"+
+							"Armor2 is \t" + jag1.getArm2() + "\n"+
 							"How many kills kaiji is " + jag1.getKaijiKills());
 		System.out.println();
-		System.out.println("Jaeger2: Name is         " + jag2.getNickName() + "\n"+
-						    "Date launch is          " + jag2.getLaunch() + "\n"+
-							"Armor1 is               " + jag2.getArm1() + "\n"+
-							"Armor2 is               " + jag2.getArm2() + "\n"+
+		System.out.println("Jaeger2: Name is \t" + jag2.getNickName() + "\n"+
+						    "Date launch is \t" + jag2.getLaunch() + "\n"+
+							"Armor1 is \t" + jag2.getArm1() + "\n"+
+							"Armor2 is \t" + jag2.getArm2() + "\n"+
 							"How many kills kaiji is " + jag2.getKaijiKills());
 		jag1.setArm1("Rifle");
 		System.out.println("We changed Jaeger2 Armor1, now is " + jag1.getArm1());
 	}
+
+		private static void activateJaeger(Jaeger jaeger) {
+			System.out.println("Input NickName:");
+			jaeger.setNickName(reader.next());
+			System.out.println("Input Launch: day/month/year");
+			jaeger.setLaunch(reader.next());
+			System.out.println("Input MarkName:");
+			jaeger.setMarkName(reader.next());
+			System.out.println("Input Armor1:");
+			jaeger.setArm1(reader.next());
+			System.out.println("Input Armor2:");
+			jaeger.setArm2(reader.next());
+			System.out.println("Input Kills:");
+			jaeger.setKaijiKills(reader.nextInt());
+			System.out.println("Input Weight:");
+			jaeger.setWeightTonn(reader.nextDouble());
+			System.out.println("Input Height:");
+			jaeger.setHeight(reader.nextFloat());
+		}
 }
