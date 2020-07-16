@@ -84,7 +84,7 @@ public class Jaeger {
 		return kaijiKill;
 	}
 	
-	public void isMove() {
+	public void setMove() {
 		isMove = true;
 	}
 
