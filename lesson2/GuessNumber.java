@@ -13,7 +13,7 @@ public class GuessNumber {
 		
 		public void startGame() {
 			randomNumber = (int) (Math.random() * 101);
-			System.out.println("randomNumber= " + randomNumber);
+			System.out.println("randomNumber = " + randomNumber);
 			searchNumb();
 			while (true) {
 				if (isWin(player1)) {
