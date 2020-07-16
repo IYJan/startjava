@@ -53,7 +53,7 @@ public class GuessNumber {
 /*		System.out.println("Begin win method");
 			System.out.println("Player" + player.getName() + player.getNumber() + " Begin Search");*/
 		if (player.getNumber() > randomNumber) {
-		System.out.println(player.getName() + " u number > that the computer number ");
+			System.out.println(player.getName() + " u number > that the computer number ");
 		} else if (player.getNumber() < randomNumber) {
 			System.out.println(player.getName() + " u number < that the computer number ");
 		} else {
