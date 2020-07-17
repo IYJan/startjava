@@ -84,17 +84,17 @@ public class Jaeger {
 		return kaijiKill;
 	}
 	
-public void setMove() {
+	public void setMove() {
 		isMove = true;
 	}
 
-public String kaijiScan() {
+	public String kaijiScan() {
 		return "scanning";
 	}
 
-public void fireArm1() {
+	public void fireArm1() {
 	}
 
-public void fireArm2() {
+	public void fireArm2() {
 	}
 }
