@@ -44,22 +44,22 @@ public class JaegerTest {
 		System.out.println("We changed Jaeger1 Armor1, now is " + jag1.getArm1());
 	}
 
-		private static void activateJaeger(Jaeger jaeger) {
-			System.out.println("Input NickName:");
-			jaeger.setNickName(reader.next());
-			System.out.println("Input Launch: day/month/year");
-			jaeger.setLaunch(reader.next());
-			System.out.println("Input MarkName:");
-			jaeger.setMarkName(reader.next());
-			System.out.println("Input Armor1:");
-			jaeger.setArm1(reader.next());
-			System.out.println("Input Armor2:");
-			jaeger.setArm2(reader.next());
-			System.out.println("Input Kills:");
-			jaeger.setKaijiKills(reader.nextInt());
-			System.out.println("Input Weight:");
-			jaeger.setWeightTonn(reader.nextDouble());
-			System.out.println("Input Height:");
-			jaeger.setHeight(reader.nextFloat());
-		}
+	private static void activateJaeger(Jaeger jaeger) {
+		System.out.println("Input NickName:");
+		jaeger.setNickName(reader.next());
+		System.out.println("Input Launch: day/month/year");
+		jaeger.setLaunch(reader.next());
+		System.out.println("Input MarkName:");
+		jaeger.setMarkName(reader.next());
+		System.out.println("Input Armor1:");
+		jaeger.setArm1(reader.next());
+		System.out.println("Input Armor2:");
+		jaeger.setArm2(reader.next());
+		System.out.println("Input Kills:");
+		jaeger.setKaijiKills(reader.nextInt());
+		System.out.println("Input Weight:");
+		jaeger.setWeightTonn(reader.nextDouble());
+		System.out.println("Input Height:");
+		jaeger.setHeight(reader.nextFloat());
+	}
 }
