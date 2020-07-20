@@ -8,7 +8,6 @@ public class JaegerTest {
 	public static void main(String[] args) {
 		jag2 = new Jaeger("Robot0", "01/01/20000", "Mark-2", "Knife", "Laser60", 10, 2.4, 200f);
 		jag1 = new Jaeger("Robot1", "11/11/1999", "Mark-1", "Fire", "Laser10", 80, 2.2, 220f);
-		//String name;
 		jag2.setNickName("Robot2");
 		jag2.setLaunch("10/11/2222");
 		jag2.setMarkName("Mark-5");
