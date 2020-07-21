@@ -1,7 +1,9 @@
-public class Calculator {	
-	public Double computation(Double num1, Double num2, char sign) {
-			Double result = 0.0;
-			switch(sign) {
+//package com.startjava.lesson_2_3.calculator;
+
+public class Calculator {
+	public double calculate(double num1, double num2, char sign) {
+		double result = 0.0;
+		switch(sign) {
 			case '+': 
 				result = num1 + num2;
 				break;
@@ -16,11 +18,8 @@ public class Calculator {
 				break;
 			case '^':
 				result = 1.0;
-				System.out.println("^ result" + result);
 				for (int i = 1; i <= num2; i++) {
-					System.out.println("for i=" + i);
 					result *= num1;
-					System.out.println("^ result" + result);
 				} 
 				break;
 			case '%': 
