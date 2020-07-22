@@ -15,17 +15,17 @@ public class GuessNumber {
 		randomNumber = (int) (Math.random() * 101);
 		System.out.println("randomNumber = " + randomNumber);
 		while (true) {
-			if (compareNums(player1)) {
+			if (inputNums(player1)) {
 				break;
 			}
-			if (compareNums(player2)) {
+			if (inputNums(player2)) {
 				return;
 			}
 			break;
 		}
 	}
 
-	private boolean compareNums(Player player) {
+	private boolean inputNums(Player player) {
 		System.out.println(player.getName() + " please, enter u number = ");
 		player.setNumber(reader.nextInt());
 		if (player.getNumber() > randomNumber) {

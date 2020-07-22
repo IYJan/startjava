@@ -27,6 +27,6 @@ public class GuessNumberTest {
 			} else { if (exit != 'N') System.out.println("Only Y or N"); 
 			}
 		} while (exit != 'N');
-		return false;
+	return false;
 	}
 }
