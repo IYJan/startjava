@@ -1,5 +1,3 @@
-//package com.startjava.lesson_2_3.calculator;
-
 public class Calculator {
 	public double calculate(double num1, double num2, char sign) {
 		double result = 0.0;
@@ -28,7 +26,7 @@ public class Calculator {
 			default : 
 				System.out.println("Error operator");
 				break;
-			}
-			return result;
+		}
+		return result;
 	}
 }
