@@ -5,6 +5,7 @@ public class JaegerTest {
 	private static char sign;
 	private static Jaeger jag1;
 	private static Jaeger jag2;
+	
 	public static void main(String[] args) {
 		jag2 = new Jaeger("Robot0", "01/01/20000", "Mark-2", "Knife", "Laser60", 10, 2.4, 200f);
 		jag1 = new Jaeger("Robot1", "11/11/1999", "Mark-1", "Fire", "Laser10", 80, 2.2, 220f);
