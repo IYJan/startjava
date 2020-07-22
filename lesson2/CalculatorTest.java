@@ -1,31 +1,28 @@
-
 import java.util.Scanner;
 
 public class CalculatorTest {
+	private static double result;
+	private static Scanner reader = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		double num1;
-		double num2;
-		double result;
-		char sign;
-		Scanner reader = new Scanner(System.in);
 		Calculator calc = new Calculator();
 		
 		do {
-			System.out.println("Input first num.:");
-			num1 = reader.nextDouble();
-			System.out.println("Input operation :");
-			sign = reader.next().charAt(0);
-			System.out.println("Input second num.:");
-			num2 = reader.nextDouble();
-			result = calc.calculate(num1, num2, sign);
-			System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
-			
-			while(true) {
-				System.out.println("Do u wanna continue?: Y or N");
-				sign = reader.next().charAt(0);
-				if (sign == 'Y' || sign == 'N') break;
+			calc.calculate();
+		} while(isNext());
+	}
+
+	private static boolean isNext() {
+	char exit;
+	do {
+		System.out.println("Do u wanna continue?: Y or N");
+		exit = reader.next().charAt(0);
+			if (exit == 'Y') {
+				return true;
+			} else if (exit != 'N') {
+				System.out.println("Only Y or N"); 
 			}
-		} while(sign == 'Y');
+	} while (exit != 'N');
+	return false;
 	}
 }
