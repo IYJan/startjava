@@ -27,8 +27,9 @@ public class JaegerTest {
 			if ( sign == 'Y') {
 				activateJaeger(jag2);
 				break;
-			} else if (sign != 'N') System.out.println("Only Y or N"); 
-		} while (sign != 'N');
+			}
+		} while((sign != 'Y') && (sign != 'N')); 
+
 		System.out.println("Jaeger1: Name is \t" + jag1.getNickName() + "\n"+
 						    "Date launch is \t\t" + jag1.getLaunch() + "\n"+
 							"Armor1 is \t\t" + jag1.getArm1() + "\n"+
@@ -43,7 +44,7 @@ public class JaegerTest {
 		jag1.setArm1("Rifle");
 		System.out.println("We changed Jaeger1 Armor1, now is " + jag1.getArm1());
 	}
-
+	
 	private static void activateJaeger(Jaeger jaeger) {
 		System.out.println("Input NickName:");
 		jaeger.setNickName(reader.next());
