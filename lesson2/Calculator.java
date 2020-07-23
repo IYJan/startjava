@@ -17,29 +17,34 @@ public class Calculator {
 		switch(sign) {
 			case '+': 
 				result = num1 + num2;
+				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '-':
 				result = num1 - num2;
+				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '*':
 				result = num1 * num2;
+				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '/':
 				result = num1 / num2;
+				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '^':
 				result = 1.0;
 				for (int i = 1; i <= num2; i++) {
 					result *= num1;
 				} 
+				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '%': 
 				result = num1 % num2;
+				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			default : 
 				System.out.println("Error operator");
 				break;
 		}
-		System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 	}
 }
