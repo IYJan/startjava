@@ -1,50 +1,36 @@
 import java.util.Scanner;
 
 public class Calculator {
-	private static double num1;
-	private static double num2;
-	private static char sign;
 	private static Scanner reader = new Scanner(System.in);
+	private static double result = 0.0;
 
-	public void calculate() {
-		double result = 0.0;
-		System.out.println("Input first num.:");
-		num1 = reader.nextDouble();
-		System.out.println("Input operation:");
-		sign = reader.next().charAt(0);
-		System.out.println("Input second num.:");
-		num2 = reader.nextDouble();
+	public double calculate(double num1, double num2, char sign) {
 		switch(sign) {
 			case '+': 
 				result = num1 + num2;
-				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '-':
 				result = num1 - num2;
-				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '*':
 				result = num1 * num2;
-				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '/':
 				result = num1 / num2;
-				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '^':
 				result = 1.0;
 				for (int i = 1; i <= num2; i++) {
 					result *= num1;
 				} 
-				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			case '%': 
 				result = num1 % num2;
-				System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + result);
 				break;
 			default : 
 				System.out.println("Error operator");
 				break;
 		}
+		return result;
 	}
 }
