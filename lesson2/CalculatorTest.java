@@ -1,18 +1,26 @@
 import java.util.Scanner;
 
 public class CalculatorTest {
-	private static Scanner reader = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		Calculator calc = new Calculator();
-		char exit;
+		Scanner reader = new Scanner(System.in);
+		double num1;
+		double num2;
+		char sign;
 
 		do {
-			calc.calculate();
+			System.out.println("Input first num.:");
+			num1 = reader.nextDouble();
+			System.out.println("Input operation:");
+			sign = reader.next().charAt(0);
+			System.out.println("Input second num.:");
+			num2 = reader.nextDouble();
+			System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + calc.calculate(num1, num2, sign));
 			do {
 				System.out.println("Do u wanna continue?: Y or N");
-				exit = reader.next().charAt(0);
-			} while((exit != 'Y') && (exit != 'N'));
-		} while (exit != 'N');
+				sign = reader.next().charAt(0);
+			} while((sign != 'Y') && (sign != 'N'));
+		} while (sign != 'N');
 	}
 }
