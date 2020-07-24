@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Calculator {
-	private static Scanner reader = new Scanner(System.in);
 	private static double result = 0.0;
 
 	public double calculate(double num1, double num2, char sign) {
