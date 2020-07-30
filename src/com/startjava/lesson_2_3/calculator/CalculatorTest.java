@@ -18,7 +18,7 @@ public class CalculatorTest {
 			sign = reader.next().charAt(0);
 			System.out.println("Input second num.:");
 			num2 = reader.nextDouble();
-			System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + calc.calculate(num1, num2, sign));
+			System.out.println(num1 + " " + sign + " " + num2 + " RESULT IS " + calc.calculate(num1, num2, sign)); //передать в класс calc аргументы num1, num2, sign
 			do {
 				System.out.println("Do u wanna continue?: Y or N");
 				sign = reader.next().charAt(0);
