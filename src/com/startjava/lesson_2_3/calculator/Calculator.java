@@ -3,27 +3,24 @@ package com.startjava.lesson_2_3.calculator;
 import java.util.Scanner;
 
 public class Calculator {
-	private static double result = 0.0;
+	private static int result = 0;
 
-	public double calculate(double num1, double num2, char sign) {
+	public int calculate(int num1, int num2, char sign) {
 		switch(sign) {
 			case '+': 
-				result = num1 + num2;
+				result = Math.addExact(num1, num2);
 				break;
 			case '-':
-				result = num1 - num2;
+				result = Math.subtractExact(num1, num2);
 				break;
 			case '*':
-				result = num1 * num2;
+				result = Math.multiplyExact(num1, num2);
 				break;
 			case '/':
-				result = num1 / num2;
+				result = Math.floorDiv(num1, num2);
 				break;
 			case '^':
-				result = 1.0;
-				for (int i = 1; i <= num2; i++) {
-					result *= num1;
-				} 
+				result = (int) Math.pow(num1, num2);
 				break;
 			case '%': 
 				result = num1 % num2;
