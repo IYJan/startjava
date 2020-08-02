@@ -21,9 +21,9 @@ public class CalculatorTest {
 			num1 = "";
 			num1 = reader.nextLine();
 			text = num1.replaceAll("\\s", "");
-			String[] lineText = text.split("[\\Q^*/+-%\\E]"); //занести в массив (каждый набор символов в отдельные ячейки)строк символы стоящие перед указанными символами в [] и после них
+			String[] lineText = text.split("[\\Q^*/+-%\\E]"); //Р·Р°РЅРµСЃС‚Рё РІ РјР°СЃСЃРёРІ (РєР°Р¶РґС‹Р№ РЅР°Р±РѕСЂ СЃРёРјРІРѕР»РѕРІ РІ РѕС‚РґРµР»СЊРЅС‹Рµ СЏС‡РµР№РєРё)СЃС‚СЂРѕРє СЃРёРјРІРѕР»С‹ СЃС‚РѕСЏС‰РёРµ РїРµСЂРµРґ СѓРєР°Р·Р°РЅРЅС‹РјРё СЃРёРјРІРѕР»Р°РјРё РІ [] Рё РїРѕСЃР»Рµ РЅРёС…
 			sign = checkSign(text);
-			System.out.println(Integer.parseInt(lineText[0]) + " " + sign + " " + Integer.parseInt(lineText[1]) + " RESULT IS " + calc.calculate(Integer.parseInt(lineText[0]), Integer.parseInt(lineText[1]), sign)); //передать в calc аргументы num1, num2, sign
+			System.out.println(Integer.parseInt(lineText[0]) + " " + sign + " " + Integer.parseInt(lineText[1]) + " RESULT IS " + calc.calculate(Integer.parseInt(lineText[0]), Integer.parseInt(lineText[1]), sign)); //РїРµСЂРµРґР°С‚СЊ РІ calc Р°СЂРіСѓРјРµРЅС‚С‹ num1, num2, sign
 			do {
 				System.out.println("Do u wanna continue?: Y or N");
 				sign = reader.next().charAt(0);
@@ -46,7 +46,7 @@ public class CalculatorTest {
 		} else if (text.indexOf("%") != -1) {
 			return '%';
 		} else {
-			System.out.println("Арифметические операции только со знаками: ^, /, *, +, -, %");
+			System.out.println("РђСЂРёС„РјРµС‚РёС‡РµСЃРєРёРµ РѕРїРµСЂР°С†РёРё С‚РѕР»СЊРєРѕ СЃРѕ Р·РЅР°РєР°РјРё: ^, /, *, +, -, %");
 			throw new IllegalArgumentException();
 		}
 		}
