@@ -11,6 +11,7 @@ public class GuessNumberTest {
 		Player player1 = new Player(reader.next());
 		System.out.println("Hello, player2, what's u name: ");
 		Player player2 = new Player(reader.next());
+		System.out.println("Hello, player2, what's u name: ");
 		GuessNumber game = new GuessNumber(player1, player2);
 
 		do {
