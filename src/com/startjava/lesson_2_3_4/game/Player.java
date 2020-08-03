@@ -2,7 +2,9 @@ package com.startjava.lesson_2_3.game;
 
 public class Player {
 	private String name;
-	private int number;
+	private int [] numbers;
+
+
 
 	public Player(String name) {
 		this.name = name;
@@ -16,11 +18,11 @@ public class Player {
 		this.name = name;
 	}
 
-	public int getNumber() {
-		return number;
+	public int getNumbers() {
+		return numbers;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
+	public void setNumbers(int numbers) {
+		this.numbers = numbers;
 	}
 }
