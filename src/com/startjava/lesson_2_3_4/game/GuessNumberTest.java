@@ -23,5 +23,6 @@ public class GuessNumberTest {
 				exit = reader.next().charAt(0);
 			} while((exit != 'Y') && (exit != 'N'));
 		} while (exit != 'N');
+		reader.close();
 	}
 }
