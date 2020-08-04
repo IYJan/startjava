@@ -1,5 +1,6 @@
 package com.startjava.lesson_2_3.game;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class GuessNumberTest {
@@ -11,11 +12,12 @@ public class GuessNumberTest {
 		Player player1 = new Player(reader.next());
 		System.out.println("Hello, player2, what's u name: ");
 		Player player2 = new Player(reader.next());
-		System.out.println("Hello, player2, what's u name: ");
 		GuessNumber game = new GuessNumber(player1, player2);
 
 		do {
 			game.startGame();
+			System.out.println(player1.getName() + " " + Arrays.toString(player1.getNumbers()));
+			System.out.println(player2.getName() + " " + Arrays.toString(player2.getNumbers()));
 			do {
 				System.out.println("Do u wanna continue?: Y or N");
 				exit = reader.next().charAt(0);
