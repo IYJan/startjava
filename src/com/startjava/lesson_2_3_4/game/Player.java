@@ -34,8 +34,4 @@ public class Player {
     public void setNumbers(int number, int index) {
         this.numbers[index] = number;
     }
-
-    public void fillNumbers() {
-        Arrays.fill(numbers, 0, lastAttempt, 0);
-    }
 }
