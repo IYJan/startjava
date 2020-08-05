@@ -16,8 +16,6 @@ public class GuessNumberTest {
 
 		do {
 			game.startGame();
-			System.out.println(player1.getName() + " " + Arrays.toString(player1.getNumbers()));
-			System.out.println(player2.getName() + " " + Arrays.toString(player2.getNumbers()));
 			do {
 				System.out.println("Do u wanna continue?: Y or N");
 				exit = reader.next().charAt(0);
