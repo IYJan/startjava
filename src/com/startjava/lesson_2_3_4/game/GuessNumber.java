@@ -9,7 +9,6 @@ public class GuessNumber {
 	private Player player2;
 	private static Scanner reader1 = new Scanner(System.in);
 
-	
 	public GuessNumber(Player player1, Player player2) {
 		this.player1 = player1;
 		this.player2 = player2;
@@ -32,11 +31,12 @@ public class GuessNumber {
 		if (!win) {
 			System.out.println("Никто не победил");
 		}
-		player1.setAttemp(player1.getNumbers().length - 1);
-		player2.setAttemp(player2.getNumbers().length -	1);
+		outNumbers();
+	}
+
+	private void outNumbers() {
 		System.out.println(player1.getName() + " " + Arrays.toString(player1.getNumbers()));
 		System.out.println(player2.getName() + " " + Arrays.toString(player2.getNumbers()));
-
 	}
 
 	private void cleanArrayNums() {
@@ -45,7 +45,6 @@ public class GuessNumber {
 	}
 
 	private boolean inputNumbers(Player player, int index) {
-		player.setAttemp(index);
 		System.out.println("У игрока осталось " + player.getName() + " " + player.getAttempts() + " попыток");
 		System.out.println(player.getName() + " please, enter u number = ");
 		player.setNumbers(reader1.nextInt(), index);
@@ -53,6 +52,7 @@ public class GuessNumber {
 	}
 
 	private boolean isCompareNumbers(Player player, int index) {
+		player.setAttemp();
 		if (player.getNumbers()[index] > randomNumber) {
 			System.out.println(player.getName() + " u number > computer number \n");
 		} else if (player.getNumbers()[index] < randomNumber) {
