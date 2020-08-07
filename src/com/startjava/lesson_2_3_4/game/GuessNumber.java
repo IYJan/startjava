@@ -1,6 +1,7 @@
 package com.startjava.lesson_2_3_4.game;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class GuessNumber {
 	private int randomNumber;
@@ -16,7 +17,7 @@ public class GuessNumber {
 	
 	public void startGame() {
 		randomNumber = (int) (Math.random() * 101);
-		System.out.println("Подсказка, загадано число: " + randomNumber);
+		System.out.println("prompt, the number is: " + randomNumber);
 		cleanArrayNums();
 		int index =0;
 		while (index < 10) {
@@ -29,7 +30,7 @@ public class GuessNumber {
 			index++;
 		}
 		if (!win) {
-			System.out.println("Никто не победил");
+			System.out.println("Nobody Win");
 		}
 		outNumbers();
 	}
@@ -45,7 +46,7 @@ public class GuessNumber {
 	}
 
 	private boolean inputNumbers(Player player, int index) {
-		System.out.println("У игрока осталось " + player.getName() + " " + player.getAttempts() + " попыток");
+		System.out.println("Player have " + player.getName() + " " + player.getAttempts() + " attempt");
 		System.out.println(player.getName() + " please, enter u number = ");
 		player.setNumbers(reader1.nextInt(), index);
 		return isCompareNumbers(player, index);
@@ -58,15 +59,15 @@ public class GuessNumber {
 		} else if (player.getNumbers()[index] < randomNumber) {
 			System.out.println(player.getName() + " u number < computer number \n");
 		} else {
-			System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " с " + (index + 1) + " попытки");
+			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + (index + 1) + " attempt");
 			win = true;
 			if (index == 9 ) {
-				System.out.println("У " + player.getName() + " закончились попытки");
+				System.out.println("Player " + player.getName() + " u attempts are lost");
 			}
 				return true;
 		}
 		if (index == 9) {
-			System.out.println("У " + player.getName() + " закончились попытки");
+			System.out.println("Player " + player.getName() + " u attempts are lost");
 		}
 		return false;
 	}
