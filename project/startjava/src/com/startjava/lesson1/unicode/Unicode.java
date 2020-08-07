@@ -1,4 +1,4 @@
-package com.startjava.lesson_1.unicode;
+package com.startjava.lesson1.unicode;
 
 import java.util.*;
 

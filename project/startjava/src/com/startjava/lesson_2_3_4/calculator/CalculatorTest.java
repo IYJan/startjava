@@ -1,16 +1,18 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 import java.util.Scanner;
-import java.util.*;
 
 public class CalculatorTest {
+	private static String text;
+	private static String num1;
+	private static char sign;
+	private static Scanner reader = new Scanner(System.in);
+	private static Calculator calc = new Calculator();
 
 	public static void main(String[] args) {
-		Calculator calc = new Calculator();
-		Scanner reader = new Scanner(System.in);
-		String text;
-		String num1;
-		char sign;
+
+
+
 		startGame();
 	}
 
