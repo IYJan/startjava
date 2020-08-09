@@ -59,10 +59,7 @@ public class GuessNumber {
 		} else {
 			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + (index + 1) + " attempt");
 			win = true;
-			if (index == 9 ) {
-				System.out.println("Player " + player.getName() + " u attempts are lost");
-			}
-				return true;
+			return true;
 		}
 		if (index == 9) {
 			System.out.println("Player " + player.getName() + " u attempts are lost");
