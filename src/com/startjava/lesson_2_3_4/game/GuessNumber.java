@@ -1,7 +1,6 @@
 package com.startjava.lesson_2_3_4.game;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class GuessNumber {
 	private int randomNumber;
@@ -19,11 +18,11 @@ public class GuessNumber {
 		randomNumber = (int) (Math.random() * 101);
 		System.out.println("prompt, the number is: " + randomNumber);
 		setup();
-		for (int index = 0; index < 10; index ++) {
-			if (makeMove(player1, index)) {
+		for (int i = 0; i <= 10; i ++) {
+			if (makeMove(player1, i)) {
 				break;
 			}
-			if (makeMove(player2, index)) {
+			if (makeMove(player2, i)) {
 				break;
 			}
 		}
@@ -40,38 +39,38 @@ public class GuessNumber {
 	}
 
 	private boolean makeMove(Player player, int index) {
-		inputNumber(player, index);
-		return isCompareNumbers(player, index);
+		if (index == 10) {
+			System.out.println("Player " + player.getName() + " u attempts are lost");
+			return false;
+		} else {
+			inputNumber(player, index);
+			return isCompareNumbers(player, index);
+		}
 	}
 
 	private void inputNumber(Player player, int index) {
-		System.out.println("Player have " + player.getName() + " " + player.getAttempts() + " attempt");
+		System.out.println("Player " + player.getName() + " have " + player.getAttempts() + " attempt");
 		System.out.println(player.getName() + " please, enter u number = ");
-		player.setNumber(reader1.nextInt(), index);
+		player.setNumber(reader1.nextInt());
 		player.setAttemp();
 	}
 
 	private boolean isCompareNumbers(Player player, int index) {
-		if (player.getNumber()[index] > randomNumber) {
+		if (player.getNumbers()[index] > randomNumber) {
 			System.out.println(player.getName() + " u number > computer number \n");
-		} else if (player.getNumber()[index] < randomNumber) {
+		} else if (player.getNumbers()[index] < randomNumber) {
 			System.out.println(player.getName() + " u number < computer number \n");
 		} else {
 			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + (index + 1) + " attempt");
 			win = true;
 			return true;
 		}
-		if (index == 9) {
-			System.out.println("Player " + player.getName() + " u attempts are lost");
-		}
 		return false;
 	}
 
 	private void outNumbers(Player player) {
-		System.out.println(" \n" + player.getName());
-		for (int arrays1 : player.getNumber()) {
-				System.out.print(arrays1 + " ");
-		}
-		System.out.println(" \n");
+		System.out.print(player.getName() + " ");
+		for (int number : player.getNumbers()) System.out.print(number + " ");
+		System.out.println("\n");
 	}
 }

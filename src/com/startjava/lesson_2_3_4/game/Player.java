@@ -24,12 +24,12 @@ public class Player {
         countAttemp++;
     }
 
-    public int[] getNumber() {
+    public int[] getNumbers() {
         return Arrays.copyOf(numbers, countAttemp);
     }
 
-    public void setNumber(int number, int index) {
-        this.numbers[index] = number;
+    public void setNumber(int number) {
+        this.numbers[countAttemp] = number;
     }
 
     public void fillNumbers() {
