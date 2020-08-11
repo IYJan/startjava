@@ -42,10 +42,9 @@ public class GuessNumber {
 		if (index == 10) {
 			System.out.println("Player " + player.getName() + " u attempts are lost");
 			return false;
-		} else {
-			inputNumber(player, index);
-			return isCompareNumbers(player, index);
 		}
+		inputNumber(player, index);
+		return isCompareNumbers(player, index);
 	}
 
 	private void inputNumber(Player player, int index) {
@@ -70,7 +69,9 @@ public class GuessNumber {
 
 	private void outNumbers(Player player) {
 		System.out.print(player.getName() + " ");
-		for (int number : player.getNumbers()) System.out.print(number + " ");
+		for (int number : player.getNumbers()) {
+			System.out.print(number + " ");
+		}
 		System.out.println("\n");
 	}
 }
