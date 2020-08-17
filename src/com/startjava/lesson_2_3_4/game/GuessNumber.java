@@ -52,9 +52,9 @@ public class GuessNumber {
 
 	private boolean isCompareNumbers(Player player, int index) {
 		if (player.getNumbers()[index] > randomNumber) {
-			System.out.println(player.getName() + " u number > computer number \n");
+			System.out.println(player.getName() + " u number > computer number");
 		} else if (player.getNumbers()[index] < randomNumber) {
-			System.out.println(player.getName() + " u number < computer number \n");
+			System.out.println(player.getName() + " u number < computer number");
 		} else {
 			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + (index + 1) + " attempt");
 			return true;
