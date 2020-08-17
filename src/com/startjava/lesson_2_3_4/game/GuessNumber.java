@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class GuessNumber {
 	private int randomNumber;
 	private Player player1;
-	private boolean win = false;
 	private Player player2;
 	private static Scanner reader1 = new Scanner(System.in);
 
@@ -25,9 +24,6 @@ public class GuessNumber {
 			if (makeMove(player2, i)) {
 				break;
 			}
-		}
-		if (!win) {
-			System.out.println("Nobody Win");
 		}
 		outNumbers(player1);
 		outNumbers(player2);
@@ -61,7 +57,6 @@ public class GuessNumber {
 			System.out.println(player.getName() + " u number < computer number \n");
 		} else {
 			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + (index + 1) + " attempt");
-			win = true;
 			return true;
 		}
 		return false;
