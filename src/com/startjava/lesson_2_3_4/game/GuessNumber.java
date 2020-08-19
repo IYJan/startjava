@@ -39,11 +39,11 @@ public class GuessNumber {
 			System.out.println("Player " + player.getName() + " u attempts are lost");
 			return false;
 		}
-		inputNumber(player, index);
+		inputNumber(player);
 		return isCompareNumbers(player, index);
 	}
 
-	private void inputNumber(Player player, int index) {
+	private void inputNumber(Player player) {
 		System.out.println("Player " + player.getName() + " have " + player.getAttempts() + " attempt");
 		System.out.println(player.getName() + " please, enter u number = ");
 		player.setNumber(reader1.nextInt());

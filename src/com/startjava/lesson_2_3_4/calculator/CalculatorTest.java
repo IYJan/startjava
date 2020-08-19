@@ -3,17 +3,17 @@ package com.startjava.lesson_2_3_4.calculator;
 import java.util.Scanner;
 
 public class CalculatorTest {
+	private static Scanner reader = new Scanner(System.in);
+	private static Calculator calc = new Calculator();
 
 	public static void main(String[] args) {
-		Calculator calc = new Calculator();
-		Scanner reader = new Scanner(System.in);
-		String text;
-		String num1;
-		char sign;
 		startGame();
 	}
 
 	public static void startGame() {
+		String text;
+		char sign;
+		String num1;
 		do {
 			System.out.println("Input arithmetic operation, example 4 + 2:");
 			text = "";

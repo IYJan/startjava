@@ -3,4 +3,5 @@
 /bin
 
 src/.idea
-src/startjava.iml
+*.iml
+*.xml
