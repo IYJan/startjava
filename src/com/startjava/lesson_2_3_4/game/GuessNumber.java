@@ -18,10 +18,10 @@ public class GuessNumber {
 		System.out.println("prompt, the number is: " + randomNumber);
 		setup();
 		for (int i = 0; i <= 10; i ++) {
-			if (makeMove(player1, i)) {
+			if (isCompareNumbers(player1, i)) {
 				break;
 			}
-			if (makeMove(player2, i)) {
+			if (isCompareNumbers(player2, i)) {
 				break;
 			}
 		}
@@ -34,23 +34,16 @@ public class GuessNumber {
 		player2.fillNumbers();
 	}
 
-	private boolean makeMove(Player player, int index) {
+//	private boolean makeMove(Player player, int index) {
+//
+//		return isCompareNumbers(player, index);
+//	}
+	private boolean isCompareNumbers(Player player, int index) {
 		if (index == 10) {
 			System.out.println("Player " + player.getName() + " u attempts are lost");
 			return false;
 		}
 		inputNumber(player);
-		return isCompareNumbers(player, index);
-	}
-
-	private void inputNumber(Player player) {
-		System.out.println("Player " + player.getName() + " have " + player.getAttempts() + " attempt");
-		System.out.println(player.getName() + " please, enter u number = ");
-		player.setNumber(reader1.nextInt());
-		player.setAttemp();
-	}
-
-	private boolean isCompareNumbers(Player player, int index) {
 		if (player.getNumbers()[index] > randomNumber) {
 			System.out.println(player.getName() + " u number > computer number");
 		} else if (player.getNumbers()[index] < randomNumber) {
@@ -60,6 +53,13 @@ public class GuessNumber {
 			return true;
 		}
 		return false;
+	}
+
+	private void inputNumber(Player player) {
+		System.out.println("Player " + player.getName() + " have " + player.getAttempts() + " attempt");
+		System.out.println(player.getName() + " please, enter u number = ");
+		player.setNumber(reader1.nextInt());
+		player.setAttemp();
 	}
 
 	private void outNumbers(Player player) {
