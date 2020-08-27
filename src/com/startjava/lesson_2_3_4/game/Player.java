@@ -24,14 +24,6 @@ public class Player {
         countAttemp++;
     }
 
-    public int getLastAttemp() {
-        return countAttemp;
-    }
-
-    public int getLastNumber() {
-        return numbers[countAttemp - 1];
-    }
-
     public int[] getNumbers() {
         return Arrays.copyOf(numbers, countAttemp);
     }
