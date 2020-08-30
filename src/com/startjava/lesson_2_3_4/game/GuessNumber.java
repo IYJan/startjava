@@ -7,7 +7,6 @@ public class GuessNumber {
 	private static final int ATTEMPS = 10;
 	private Player player1;
 	private Player player2;
-	private int attempts;
 	private static Scanner scan = new Scanner(System.in);
 
 	public GuessNumber(Player player1, Player player2) {

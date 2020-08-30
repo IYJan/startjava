@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Player {
     private String name;
     private int countAttemp;
-    private int[] numbers;// = new int[];
+    private int[] numbers;
 
     public Player(String name) {
         this.name = name;
@@ -15,7 +15,7 @@ public class Player {
         return name;
     }
 
-    public void setCountAttemp (int numbers){
+    public void setCountAttemp(int numbers){
         this.numbers = new int[numbers];
     }
 
