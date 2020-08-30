@@ -3,10 +3,9 @@ package com.startjava.lesson_2_3_4.game;
 import java.util.Arrays;
 
 public class Player {
-    private static final int ATTEMPS = 10;
     private String name;
     private int countAttemp;
-    private int[] numbers = new int[ATTEMPS];
+    private int[] numbers;// = new int[];
 
     public Player(String name) {
         this.name = name;
@@ -16,12 +15,8 @@ public class Player {
         return name;
     }
 
-     public int getAttempts() {
-        return ATTEMPS - countAttemp;
-    }
-
-    public void setAttemp() {
-        countAttemp++;
+    public void setCountAttemp (int numbers){
+        this.numbers = new int[numbers];
     }
 
     public int getLastAttemp() {
@@ -37,7 +32,8 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        this.numbers[countAttemp] = number;
+        numbers[countAttemp] = number;
+        countAttemp++;
     }
 
     public void fillNumbers() {
