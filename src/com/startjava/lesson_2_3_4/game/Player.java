@@ -7,20 +7,22 @@ public class Player {
     private int countAttemp;
     private int[] numbers;
 
-    public Player(String name) {
+    public Player(String name, int numbers) {
         this.name = name;
+        this.numbers = new int[numbers];
+    }
+
+    public int getCountAttemp() {
+        return countAttemp;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setCountAttemp(int numbers){
-        this.numbers = new int[numbers];
-    }
-
-    public int getLastAttemp() {
-        return countAttemp;
+    public void setNumber(int number) {
+        numbers[countAttemp] = number;
+        countAttemp++;
     }
 
     public int getLastNumber() {
@@ -29,15 +31,5 @@ public class Player {
 
     public int[] getNumbers() {
         return Arrays.copyOf(numbers, countAttemp);
-    }
-
-    public void setNumber(int number) {
-        numbers[countAttemp] = number;
-        countAttemp++;
-    }
-
-    public void fillNumbers() {
-        Arrays.fill(numbers, 0, countAttemp, 0);
-        countAttemp = 0;
     }
 }

@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class GuessNumber {
 	private int randomNumber;
-	private static final int ATTEMPS = 10;
 	private Player player1;
 	private Player player2;
+	private static int ATTEMPS;
 	private static Scanner scan = new Scanner(System.in);
 
-	public GuessNumber(Player player1, Player player2) {
+	public GuessNumber(Player player1, Player player2, int ATTEMPS) {
 		this.player1 = player1;
 		this.player2 = player2;
+		this.ATTEMPS  = ATTEMPS;
 	}
 
-	public void startGame() {
+	public void start() {
 		randomNumber = (int) (Math.random() * 101);
 		System.out.println("prompt, the number is: " + randomNumber);
-		setup(player1);
-		setup(player2);
-		for (int i = 0; i <= 10; i++) {
+
+		for (int i = 0; i <= ATTEMPS; i++) {
 			if (makeMove(player1)) {
 				break;
 			}
@@ -31,17 +31,12 @@ public class GuessNumber {
 		outNumbers(player2);
 	}
 
-	private void setup(Player player) {
-		player.setCountAttemp(ATTEMPS);
-		player.fillNumbers();
-	}
-
 	private boolean makeMove(Player player) {
-		if (player.getLastAttemp() == 10) {
+		if (player.getCountAttemp() == 10) {
 			System.out.println("Player " + player.getName() + " u attempts are lost");
 			return false;
 		}
-		System.out.println("Player " + player.getName() + " have " + (ATTEMPS - player.getLastAttemp()) + " attempt");
+		System.out.println("Player " + player.getName() + " have " + (ATTEMPS - player.getCountAttemp()) + " attempt");
 		inputNumber(player);
 		return isCompareNumbers(player);
 	}
@@ -53,10 +48,10 @@ public class GuessNumber {
 
 	private boolean isCompareNumbers(Player player) {
 		if (player.getLastNumber() == randomNumber) {
-			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + player.getLastAttemp() + " attempt");
+			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + player.getCountAttemp() + " attempt");
 			return true;
 		} else {
-			String outText =  player.getLastNumber() < randomNumber ? " < " : " > ";
+			String outText = player.getLastNumber() < randomNumber ? " < " : " > ";
 			System.out.println(player.getName() + " u number " + outText + " computer number");
 		}
 		return false;
