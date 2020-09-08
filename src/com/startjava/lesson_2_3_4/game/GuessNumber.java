@@ -18,7 +18,6 @@ public class GuessNumber {
 	public void start() {
 		randomNumber = (int) (Math.random() * 101);
 		System.out.println("prompt, the number is: " + randomNumber);
-
 		for (int i = 0; i <= ATTEMPS; i++) {
 			if (makeMove(player1)) {
 				break;
@@ -51,8 +50,7 @@ public class GuessNumber {
 			System.out.println("Player " + player.getName() + " u're guessed " + randomNumber + " for " + player.getCountAttemp() + " attempt");
 			return true;
 		} else {
-			String outText = player.getLastNumber() < randomNumber ? " < " : " > ";
-			System.out.println(player.getName() + " u number " + outText + " computer number");
+			System.out.println(player.getName() + " u number " + (player.getLastNumber() < randomNumber ? " < " : " > ") + " computer number");
 		}
 		return false;
 	}
